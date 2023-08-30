@@ -1,4 +1,2 @@
-import { defineComponent, reactive, ref, onMounted } from 'vue';
-export default defineComponent({
-    name: 'Login',
-})
+import { Vue } from 'vue-class-component';
+export default class Login extends Vue {}
