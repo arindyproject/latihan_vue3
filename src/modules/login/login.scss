@@ -1,6 +1,6 @@
 
 .form-bg{
-   height: auto;
+   height: 2000px;
    
 }
 .form-container{
@@ -122,6 +122,8 @@
     color: #777;
     text-decoration: underline;
 }
+
+
 @media only screen and (max-width:576px){
     .form-container{ padding-bottom: 15px; }
     .form-container .form-icon{

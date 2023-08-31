@@ -1,29 +1,33 @@
-<div class="form-bg ">
-    <div class="container h-100">
-        <div class="row justify-content-center align-self-center">
-            <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8 ">
-                <div class="form-container">
-                    <div class="form-icon">
-                        <font-awesome-icon icon="fa-solid fa-user-secret" />
-
-                        <span class="signup"><a href="">Don't have account? Signup</a></span>
+<div class="container ">
+    <div class="d-flex align-items-center justify-content-center " :style="{ height: windowHeight + 'px' }">
+        <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
+            <div class="form-container">
+                <div class="form-icon">
+                    <div class="text-center">
+                        <img class="rounded-circle shadow-4-strong" alt="avatar2" width="90" height="90"
+                            src="https://avatars.githubusercontent.com/u/31184693?v=4" />
                     </div>
-                    <form class="form-horizontal">
-                        <h3 class="title">Member Login</h3>
-                        <div class="form-group">
-                            <span class="input-icon"><font-awesome-icon icon="fa-solid fa-envelope" />
-                            </span>
-                            <input class="form-control" type="email" placeholder="Email Address">
-                        </div>
-                        <div class="form-group">
-                            <span class="input-icon"><font-awesome-icon :icon="['fa', 'key']" />
-                            </span>
-                            <input class="form-control" type="password" placeholder="Password">
-                        </div>
-                        <button class="btn signin">Login</button>
-                        <span class="forgot-pass"><a href="#">Forgot Username/Password?</a></span>
-                    </form>
+                    <br>
+                    <h5><b>Template ArindyProject</b></h5>
+                    <p>Ini adalah Template menggunakan Vue3 dan Boostrap5 dari ArindyProject</p>
                 </div>
+                <form class="form-horizontal">
+                    <h3 class="title">Login</h3>
+                    <div class="form-group">
+                        <span class="input-icon">
+                            <font-awesome-icon icon="fa-solid fa-envelope" />
+                        </span>
+                        <input class="form-control" type="email" placeholder="Email / Username">
+                    </div>
+                    <div class="form-group">
+                        <span class="input-icon">
+                            <font-awesome-icon :icon="['fa', 'key']" />
+                        </span>
+                        <input class="form-control" type="password" placeholder="Password">
+                    </div>
+                    <button class="btn signin">Login</button>
+                    <span class="forgot-pass"><a href="#">REGISTER NEW USER</a></span>
+                </form>
             </div>
         </div>
     </div>
