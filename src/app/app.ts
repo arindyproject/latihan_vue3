@@ -2,4 +2,6 @@
 import { RouterLink, RouterView } from 'vue-router'
 
 import { Vue } from 'vue-class-component';
-export default class App extends Vue {}
+export default class App extends Vue {
+    isAppLoading: boolean = false;
+}
