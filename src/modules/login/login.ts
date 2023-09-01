@@ -1,5 +1,5 @@
 import { Vue } from 'vue-class-component';
-
+import {ref} from "vue";
 import { useStore } from 'vuex';
 import store from '@/store';
 
@@ -10,18 +10,22 @@ export default class Login extends Vue {
 
    store = useStore();
    app_base_data = store.state.app_base_data;
-    
 
     async mounted() {
         try {
             const response = await this.$axios.get('app.json');
             console.log('Response:', response.data);
             if(response.data.status){
-                
+                this.app_base_data = response.data.data;
             }
           } catch (error) {
             console.error('Error:', error);
           }
+        
+        if(this.app_base_data.img_background != ''){
+            document.body.style.backgroundImage = `url('${this.app_base_data.img_background}')`;
+        }
+          
     }
 
     
@@ -34,10 +38,5 @@ export default class Login extends Vue {
         return `${this.app_base_data.main_theme_color}`;
     }
 
-    get styleObject(){
-        return {
-            '--main-color'  :   '#E9374C',
-            '--second-color' : '#D31128',
-        }
-    }
+
 }

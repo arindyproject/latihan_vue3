@@ -1,11 +1,16 @@
 
-
 :root {
     --main-color:  #E9374C;
     --second-color: #D31128;
 }
 
-
+body{
+    
+    background-position: center center;  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 .form-container{
    

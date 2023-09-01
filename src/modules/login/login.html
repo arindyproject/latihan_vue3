@@ -1,6 +1,5 @@
 
 <div class="container ">
-    {{styleObject}}
     <div class="d-flex align-items-center justify-content-center " :style="{ height: windowHeight + 'px' }">
         <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
             <div class="form-container" :style="{background:gradientStyle}">
@@ -31,7 +30,7 @@
                         </span>
                         <input class="form-control" type="password" placeholder="Password">
                     </div>
-                    <button :style="{styleObject}" class="btn signin" >Login</button>
+                    <button  class="btn signin" :style="{background:mainColor}">Login</button>
                     <span class="forgot-pass"><a href="#">REGISTER NEW USER</a></span>
                 </form>
             </div>
