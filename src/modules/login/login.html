@@ -1,17 +1,23 @@
+
 <div class="container ">
+    {{styleObject}}
     <div class="d-flex align-items-center justify-content-center " :style="{ height: windowHeight + 'px' }">
         <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
-            <div class="form-container">
+            <div class="form-container" :style="{background:gradientStyle}">
                 <div class="form-icon">
                     <div class="text-center">
-                        <img class="rounded-circle shadow-4-strong" alt="avatar2" width="90" height="90"
+                        <img v-if="app_base_data.main_icon !== ''" class="rounded-circle shadow-4-strong" alt="avatar2" width="90" height="90"
                             src="https://avatars.githubusercontent.com/u/31184693?v=4" />
+                        
+                        <h1 v-else><font-awesome-icon icon="fa-solid fa-user" /></h1>
+                        
                     </div>
                     <br>
-                    <h5><b>Template ArindyProject</b></h5>
-                    <p>Ini adalah Template menggunakan Vue3 dan Boostrap5 dari ArindyProject</p>
+                    <h5><b>{{app_base_data.company_name}}</b></h5>
+                    <p class="p-2">{{app_base_data.tag_line_one}}. {{app_base_data.tag_line_two}}</p>
                 </div>
                 <form class="form-horizontal">
+                    <h4 class="text-center">{{app_base_data.app_name}}</h4>
                     <h3 class="title">Login</h3>
                     <div class="form-group">
                         <span class="input-icon">
@@ -25,7 +31,7 @@
                         </span>
                         <input class="form-control" type="password" placeholder="Password">
                     </div>
-                    <button class="btn signin">Login</button>
+                    <button :style="{styleObject}" class="btn signin" >Login</button>
                     <span class="forgot-pass"><a href="#">REGISTER NEW USER</a></span>
                 </form>
             </div>
