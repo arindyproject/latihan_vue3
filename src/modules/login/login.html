@@ -1,3 +1,5 @@
+<loading v-model:active="isLoading" :can-cancel="false" :is-full-page="true" :color="mainColor" loader="bars"
+    background-color="app_base_data.second_theme_color" />
 
 <div class="container ">
     <div class="d-flex align-items-center justify-content-center " :style="{ height: windowHeight + 'px' }">
@@ -5,32 +7,44 @@
             <div class="form-container" :style="{background:gradientStyle}">
                 <div class="form-icon">
                     <div class="text-center">
-                        <img v-if="app_base_data.main_icon !== ''" class="rounded-circle shadow-4-strong" alt="avatar2" width="90" height="90"
-                            src="https://avatars.githubusercontent.com/u/31184693?v=4" />
-                        
-                        <h1 v-else><font-awesome-icon icon="fa-solid fa-user" /></h1>
-                        
+                        <img v-if="app_base_data.main_icon !== ''" class="rounded-circle shadow-4-strong" alt="avatar2"
+                            width="90" height="90" src="https://avatars.githubusercontent.com/u/31184693?v=4" />
+
+                        <h1 v-else>
+                            <font-awesome-icon icon="fa-solid fa-user" />
+                        </h1>
+
                     </div>
                     <br>
                     <h5><b>{{app_base_data.company_name}}</b></h5>
                     <p class="p-2">{{app_base_data.tag_line_one}}. {{app_base_data.tag_line_two}}</p>
                 </div>
-                <form @submit.prevent="submitForm" class="form-horizontal" >
+                <form @submit.prevent="submitForm" class="form-horizontal ">
                     <h4 class="text-center">{{app_base_data.app_name}}</h4>
                     <h3 class="title">Login</h3>
+
+
                     <div class="form-group">
                         <span class="input-icon">
                             <font-awesome-icon icon="fa-solid fa-envelope" />
                         </span>
-                        <input class="form-control" type="text" v-model="user.username" placeholder="Email / Username">
+                        <input class="form-control " type="text" v-model="user.username" 
+                            :class="{'is-invalid' : isInvalid.username.status}"
+                            placeholder="Email / Username">
                     </div>
+                    
+
+
                     <div class="form-group">
                         <span class="input-icon">
                             <font-awesome-icon :icon="['fa', 'key']" />
                         </span>
-                        <input class="form-control" type="password" v-model="user.password" placeholder="Password">
+                        <input class="form-control"  type="password" v-model="user.password" 
+                            :class="{'is-invalid' : isInvalid.password.status}"
+                            placeholder="Password">
                     </div>
-                    <button  class="btn signin" >Login</button>
+
+                    <button class="btn signin">Login</button>
                     <span class="forgot-pass"><a href="#">REGISTER NEW USER</a></span>
                 </form>
             </div>
