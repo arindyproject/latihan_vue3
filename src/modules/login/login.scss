@@ -101,7 +101,7 @@ body{
 }
 .form-horizontal .btn{
     color: rgba(255,255,255,0.8);
-    background: var(--main-color);
+    background: #E9374C;
     font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
@@ -115,7 +115,7 @@ body{
 .form-horizontal .btn:hover,
 .form-horizontal .btn:focus{
     color: #fff;
-    background-color: var(--second-color);
+    background-color: #D31128;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 .form-horizontal .forgot-pass{

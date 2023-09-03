@@ -10,7 +10,14 @@ import {
 import store from '@/store';
 
 import Loading from 'vue-loading-overlay';
-import { faL } from '@fortawesome/free-solid-svg-icons';
+import { toast } from 'vue3-toastify';
+
+
+
+import {authLogin, authStatus} from '@/utils/auth'
+
+import router from '@/router';
+
 
 @Options({
     components: {
@@ -20,6 +27,7 @@ import { faL } from '@fortawesome/free-solid-svg-icons';
 export default class Login extends Vue {
     isLoading:boolean = false;
     windowHeight = window.innerHeight;
+
 
     store = useStore();
     app_base_data = store.state.app_base_data;
@@ -59,10 +67,15 @@ export default class Login extends Vue {
             document.body.style.backgroundImage = `url('${this.app_base_data.img_background}')`;
         }
 
-        
+        const auth_status = await authStatus()
+        if(auth_status){
+            console.log(auth_status)
+            this.$router.push('home')
+        }
     }
     //==================================================================================
-    submitForm(){
+
+    async submitForm(){
         this.isInvalid = {
             username: {
                 status : false,
@@ -73,7 +86,7 @@ export default class Login extends Vue {
                 msg : ""
             }
         }
-
+        //cek input terisi-----------------------------------------------
         if(this.user.username == ''){
             this.isInvalid.username.status = true; 
             this.isInvalid.username.msg    = "Username / Email Wajib Diisi!!";
@@ -82,7 +95,7 @@ export default class Login extends Vue {
             this.isInvalid.password.status = true; 
             this.isInvalid.password.msg    = "Password Wajib Diisi!!";
         }
-
+        //jika user dan pass kosong----------------------------------------------
         if(this.user.username == '' || this.user.password == ''){
             let messages = "";
             let isInvalid = this.isInvalid;
@@ -97,8 +110,19 @@ export default class Login extends Vue {
                 html: messages
             });
         }
-
-        
+        //jika user dan pass terisi----------------------------------------------
+        else{
+            this.isLoading = true;
+            const auth = await authLogin(this.user.username, this.user.password);
+            this.isLoading = false;
+            if(auth.status){
+                toast.success("berhasil Login")
+                this.$router.push('home')
+            }else{
+                toast.error(auth.data)
+            }
+        }
+        //-----------------------------------------------------------------------
     }
 
 

@@ -1,11 +1,9 @@
 <div class="wrapper">
-    <nav>
-        <RouterLink to="/home">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/login">Login</RouterLink>
-      </nav>
+    <app-header  
+    :app_title="app_title"
+    :bg_color="app_base_data.main_theme_color"/>
     <div class="content-wrapper">
-        <router-view></router-view>
+        <router-view ></router-view>
     </div>
 </div>
 
