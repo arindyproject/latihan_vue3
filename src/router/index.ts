@@ -40,7 +40,8 @@ const router = createRouter({
       component: () => import('@/modules/login/login.vue')
     },
   ],
-  linkActiveClass: 'active text-white',
+  linkActiveClass: 'active',
+  linkExactActiveClass: 'my-active',
 })
 
 

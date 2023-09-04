@@ -1,39 +1,60 @@
-<!-- Navbar -->
-<nav
-    id="main-header"
-    class="main-header navbar navbar-expand"
-    :class="navbarVariant"
-    :style="{ 'background-color' : bg_color }"
->
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <button class="nav-link" role="button" @click="onToggleMenuSidebar">
-                <font-awesome-icon icon="fa-solid fa-bars" />
-            </button>
-        </li>
-        <li class="nav-item">
+<nav id="navbar-header" class="navbar navbar-expand-lg" :class="navbarVariant" :style="{ 'background-color' : bg_color }">
+    <div class="container-fluid">
+        <button class="nav-link my-menu-header" role="button" @click="onToggleMenuSidebar">
+            <font-awesome-icon icon="fa-solid fa-bars" />
+        </button>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item d-none d-sm-inline-block">
+                </li>
+                <!------------------------------------------------------------------------------------------------------>
+                <!------------------------------------------------------------------------------------------------------>
+                <li class="nav-item d-none d-sm-inline-block ">
+                    <router-link to="home" class="nav-link">
+                        <font-awesome-icon icon="fa-solid fa-home" />
+                        Home
+                    </router-link>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <router-link to="about" class="nav-link">
+                        <font-awesome-icon :icon="['fas', 'circle-info']" />
+                        About
+                    </router-link>
+                </li>
+                <!------------------------------------------------------------------------------------------------------>
+                <!------------------------------------------------------------------------------------------------------>
+            </ul>
+        </div>
+        <!------------------------------------------------------------------------------------------------------>
+       
+        <!------------------------------------------------------------------------------------------------------>
+        <ul class="navbar-nav flex-row">
+            <!------------------------------------------------------------------------------------------------------>
+            <li class="nav-item me-3 me-lg-1">
+                <form class="d-flex input-group w-auto">
+                    <input type="search" class="form-control form-control" placeholder="Type query" aria-label="Search" />
+                    <button class="btn btn-warning" type="button" data-mdb-ripple-color="dark">
+                        <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
+                    </button>
+                </form>
+            </li>
+            <!------------------------------------------------------------------------------------------------------>
+
+            <!------------------------------------------------------------------------------------------------------>
+            <li class="nav-item me-3 me-lg-1">
+                <a class="nav-link" href="#">
+                    <span><font-awesome-icon :icon="['fas', 'magnifying-glass']" /></span>
+                </a>
+            </li>
+           
+            <user-profile></user-profile>
             
-        </li>
-
-        <!------------------------------------------------------------>
-        <li class="nav-item d-none d-sm-inline-block">
-            <router-link to="home" class="nav-link">
-                <font-awesome-icon icon="fa-solid fa-home" />
-                Home
-            </router-link>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <router-link to="about" class="nav-link">
-                <font-awesome-icon :icon="['fas', 'circle-info']" />
-                About
-            </router-link>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <button class="nav-link" @click="btnSingOut" >Logout</button>
-        </li>
-    </ul>
-
-
-    
-
+            <!------------------------------------------------------------------------------------------------------>
+            
+        </ul>
+        <!------------------------------------------------------------------------------------------------------>
+        
+    </div>
 </nav>

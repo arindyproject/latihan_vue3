@@ -2,7 +2,12 @@ import {
     Options, Vue
 } from 'vue-class-component';
 
+import userProfile from './userProfile/userProfile.vue'
+
 @Options({
+    components: {
+        'user-profile': userProfile
+    },
     props: {
         bg_color : {
             required: false,

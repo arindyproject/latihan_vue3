@@ -37,6 +37,10 @@ export default class Main extends Vue {
 
     async mounted() {
         this.is_login = await authStatus();
-        this.$router.push("home")
+
+        if(this.$route.path == "/"){
+            this.$router.push("home")
+        }
+        
     }
 }

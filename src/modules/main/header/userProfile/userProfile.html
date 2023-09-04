@@ -1,0 +1,39 @@
+<li class="nav-item dropdown user-menu" hide-arrow>
+    <div slot="button">
+        <font-awesome-icon :icon="['fa', 'user']" />
+    </div>
+    <div slot="menu">
+        
+        <!-- Menu Body -->
+        <li class="user-body">
+            <div class="row">
+                <div class="col-4 text-center">
+                    <a href="#">AA</a>
+                </div>
+                <div class="col-4 text-center">
+                    <a href="#">AA</a>
+                </div>
+                <div class="col-4 text-center">
+                    <a href="#">AA</a>
+                </div>
+            </div>
+            <!-- /.row -->
+        </li>
+        <!-- Menu Footer-->
+        <li class="user-footer">
+            <router-link
+                to="/"
+                class="btn btn-default btn-flat"
+                @click="btnProfile = false;"
+            >
+                Profile
+            </router-link>
+            <button
+                @click="btnLogout"
+                class="btn btn-default btn-flat float-right"
+            >
+                Logout
+            </button>
+        </li>
+    </div>
+</li>
