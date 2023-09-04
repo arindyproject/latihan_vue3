@@ -1,39 +1,12 @@
-<li class="nav-item dropdown user-menu" hide-arrow>
-    <div slot="button">
-        <font-awesome-icon :icon="['fa', 'user']" />
-    </div>
-    <div slot="menu">
-        
-        <!-- Menu Body -->
-        <li class="user-body">
-            <div class="row">
-                <div class="col-4 text-center">
-                    <a href="#">AA</a>
-                </div>
-                <div class="col-4 text-center">
-                    <a href="#">AA</a>
-                </div>
-                <div class="col-4 text-center">
-                    <a href="#">AA</a>
-                </div>
-            </div>
-            <!-- /.row -->
-        </li>
-        <!-- Menu Footer-->
-        <li class="user-footer">
-            <router-link
-                to="/"
-                class="btn btn-default btn-flat"
-                @click="btnProfile = false;"
-            >
-                Profile
-            </router-link>
-            <button
-                @click="btnLogout"
-                class="btn btn-default btn-flat float-right"
-            >
-                Logout
-            </button>
-        </li>
-    </div>
-</li>
+<div class="dropdown text-end">
+    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+    </a>
+    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
+      <li><a class="dropdown-item" href="#">New project...</a></li>
+      <li><a class="dropdown-item" href="#">Settings</a></li>
+      <li><a class="dropdown-item" href="#">Profile</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Sign out</a></li>
+    </ul>
+  </div>
