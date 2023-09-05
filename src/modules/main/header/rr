@@ -1,0 +1,53 @@
+
+
+<!--=============== HEADER ===============-->
+<header class="myheader " :style="{ 'background-color' : bg_color }" id="header">
+  <nav class="nav mycontainer ">
+    <a href="#" class="nav__logo">Marlon</a>
+
+    <div class="nav__menu " :style="{ 'background-color' : bg_color }" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <router-link to="home" class="nav__link active-link">
+            <font-awesome-icon class="nav__icon" icon="fa-solid fa-home" />
+            <span class="nav__name text-center">Home</span>
+          </router-link>
+        </li>
+
+        <li class="nav__item">
+          <router-link to="about" class="nav__link active-link">
+            <font-awesome-icon class="nav__icon" :icon="['fas', 'circle-info']" />
+            <span class="nav__name text-center">About</span>
+          </router-link>
+        </li>
+
+   
+
+        <li class="nav__item">
+          <router-link to="about" class="nav__link active-link">
+            <font-awesome-icon class="nav__icon" :icon="['fas', 'circle-info']" />
+            <span class="nav__name text-center">Pemeriksaan</span>
+          </router-link>
+        </li>
+
+        <li class="nav__item">
+          <router-link to="home" class="nav__link active-link">
+            <font-awesome-icon class="nav__icon" icon="fa-solid fa-home" />
+            <span class="nav__name text-center">Home Laporan</span>
+          </router-link>
+        </li>
+
+        <li class="nav__item">
+          <router-link to="home" class="nav__link active-link">
+            <font-awesome-icon class="nav__icon" icon="fa-solid fa-home" />
+            <span class="nav__name text-center">Pendaftaran </span>
+          </router-link>
+        </li> 
+
+       
+      </ul>
+    </div>
+
+    <img src="https://github.com/mdo.png" alt="mdo"  class="nav__img">
+  </nav>
+</header>
