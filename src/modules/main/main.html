@@ -1,6 +1,7 @@
 <div class="wrapper">
     <app-header  
-    :bg_color="app_base_data.main_theme_color"/>
+    :bg_color="app_base_data.main_theme_color"
+    :menus="getMenus"/>
     <div class="content-wrapper">
         <router-view ></router-view>
     </div>

@@ -1,12 +1,35 @@
-<div class="dropdown text-end">
-    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-      <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-    </a>
-    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
-      <li><a class="dropdown-item" href="#">New project...</a></li>
-      <li><a class="dropdown-item" href="#">Settings</a></li>
-      <li><a class="dropdown-item" href="#">Profile</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Sign out</a></li>
-    </ul>
-  </div>
+<div class="dropdown">
+  
+  <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button"
+    data-bs-toggle="dropdown" aria-expanded="false">
+
+      <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
+        alt="Black and White Portrait of a Man" loading="lazy" />
+        
+        <span v-if="isLoading" class="badge rounded-pill badge-notification bg-dark">
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        </span>
+
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink" style="min-width: 19rem;">
+    <li>
+      <div class="px-3 pt-3 d-flex">
+        <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle me-3" height="40"
+          alt="" loading="lazy" />
+        <div>
+          <h6 class="mb-0">Marie Campbell</h6>
+          <p class="mb-2">mariecampbell@example.com</p>
+          <a class="mb-0" href="">Manage your Google Account</a>
+        </div>
+      </div>
+      <hr class="mb-2">
+    </li>
+    <li>
+      <button  class="  text-center dropdown-item" @click="btnSingOut">
+        <font-awesome-icon :icon="['fa', 'right-from-bracket']" />
+        <span> Sign out</span>
+      </button>
+    </li>
+
+  </ul>
+</div>

@@ -17,13 +17,17 @@ import Header from './header/header.vue';
     components: {
         'app-header': Header,
     },
+    computed : {
+        getMenus(){
+            return this.$route.meta.menus || [];
+        }
+    }
     
 })
 export default class Main extends Vue {
-    is_login = false
-    store = useStore();
-    app_base_data = store.state.app_base_data;
-
+    is_login        = false
+    store           = useStore();
+    app_base_data   = store.state.app_base_data;
 
     async btnSingOut(){
         const log = await authLogout()
@@ -37,10 +41,10 @@ export default class Main extends Vue {
 
     async mounted() {
         this.is_login = await authStatus();
-
         if(this.$route.path == "/"){
             this.$router.push("home")
         }
         
     }
+ 
 }

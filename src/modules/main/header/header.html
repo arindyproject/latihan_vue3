@@ -14,13 +14,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <router-link class="nav-link" aria-current="page" to="home">Home</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" aria-current="page" to="about">About</router-link>
+
+        <li class="nav-item" v-for="menuItem in menus" :key="menuItem.path_name">
+          <router-link class="nav-link" aria-current="page" :to="menuItem.path_name"><font-awesome-icon v-if="menuItem.icon" :icon="menuItem.icon" /> {{menuItem.title}}</router-link>
         </li>
 
+  
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown link
@@ -36,78 +35,17 @@
       <!-- Left links -->
 
       <!-- Search form -->
-      <form class="d-flex input-group w-auto">
-        <input type="search" class="form-control" placeholder="Type query" aria-label="Search" />
-        <button class="btn btn-outline-warning" type="button" data-mdb-ripple-color="dark"
-          style="padding: .45rem 1.5rem .35rem;">
-          <font-awesome-icon class="" icon="fa-solid fa-search" />
-        </button>
-      </form>
+      <search-base></search-base>
       <!-- Search form -->
 
     </div>
     <!-- Collapsible wrapper -->
 
-
     <!-- Right elements -->
     <div class="d-flex align-items-center">
-      <!-- Icon -->
-      <a class="text-reset me-3" href="#">
-        <font-awesome-icon class="" icon="fa-solid fa-shopping-cart" />
-      </a>
-
-      <!-- Notifications -->
-      <div class="dropdown">
-        <a class="text-reset me-3  hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          <font-awesome-icon icon="fa-solid fa-bell" />
-          <span class="badge rounded-pill badge-notification bg-danger">1</span>
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-          <li>
-            <a class="dropdown-item" href="#">Some news</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Another news</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </li>
-        </ul>
-      </div>
       <!-- Avatar -->
-      <div class="dropdown">
-        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
-          role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
-            alt="Black and White Portrait of a Man" loading="lazy" />
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink" style="min-width: 19rem;">
-          <li>
-            <div class="px-3 pt-3 d-flex">
-              <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle me-3" height="40"
-                alt="" loading="lazy" />
-              <div>
-                <h6 class="mb-0">Marie Campbell</h6>
-                <p class="mb-2">mariecampbell@example.com</p>
-                <a class="mb-0" href="">Manage your Google Account</a>
-              </div>
-            </div>
-            <hr class="mb-2">
-          </li>
-          <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle fa-fw me-3"></i><span>Your
-                channel</span></a></li>
-          <li><a class="dropdown-item" href="#"><i class="fas fa-dollar-sign fa-fw me-3"></i><span>Paid
-                memberships</span></a></li>
-          <li><a class="dropdown-item" href="#"><i class="fas fa-play-circle fa-fw me-3"></i><span>YouTube
-                Studio</span></a></li>
-          <li><a class="dropdown-item" href="#"><i class="fas fa-users-cog fa-fw me-3"></i><span>Switch
-                account</span><i class="fas fa-chevron-right float-end mt-1"></i></a></li>
-          <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-3"></i><span>Sign out</span></a>
-          </li>
-          
-        </ul>
-      </div>
+      <user-profile></user-profile>
+      <!-- Avatar -->
     </div>
     <!-- Right elements -->
 
