@@ -14,6 +14,23 @@ const group_home = [
     path_name : "about",
     icon      : ['fa', 'circle-info'],
     children  : []
+  },
+  {
+    title     : "XXX",
+    path_name : "aboutd",
+    icon      : ['fa', 'circle-info'],
+    children  : [
+      {
+        title     : "HOME",
+        path_name : "home",
+        icon      : ['fa', 'fa-home'],
+      },
+      {
+        title     : "ABOUT",
+        path_name : "about",
+        icon      : ['fa', 'circle-info'],
+      },
+    ]
   }
 ];
 
@@ -56,7 +73,7 @@ const router = createRouter({
       component: () => import('@/modules/login/login.vue')
     },
   ],
-  linkActiveClass: 'text-white',
+  linkActiveClass: 'active btn btn-outline-warning  rounded-pill',
   linkExactActiveClass: '',
 })
 
