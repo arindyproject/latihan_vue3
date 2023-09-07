@@ -9,18 +9,21 @@ import {
 } from 'vuex';
 import store from '@/store';
 
-import {authStatus, authLogout} from '@/utils/auth'
+import {authStatus} from '@/utils/auth'
+
 
 import Header from './header/header.vue';
+import appBotNav from './appBotNav/appBotNav.vue';
 
 @Options({
     components: {
         'app-header': Header,
+        'app-bottom-nav' : appBotNav,
     },
     computed : {
         getMenus(){
             return this.$route.meta.menus || [];
-        }
+        },
     }
     
 })
@@ -29,14 +32,7 @@ export default class Main extends Vue {
     store           = useStore();
     app_base_data   = store.state.app_base_data;
 
-    async btnSingOut(){
-        const log = await authLogout()
-        console.log(log)
-        if(log){
-            toast.success("berhasil Logout");
-            this.$router.push("login")
-        }
-    }
+
 
 
     async mounted() {
