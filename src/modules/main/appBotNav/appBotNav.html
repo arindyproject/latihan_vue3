@@ -1,47 +1,36 @@
 <!-- Navbar -->
-<header class="navbar navbar-expand-lg fixed-bottom " :style="{ 'background-color' : bg_color }">
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-  
-     
-  
-  
-      <!-- Collapsible wrapper -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContentbottom">
-        <!-- Left links -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-  
-          <li class="nav-item" v-for="menuItem in menus" :class="{'dropup' : menuItem.children.length > 0}" :key="menuItem.path_name">
-            
-            <a v-if="menuItem.children.length > 0" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <font-awesome-icon v-if="menuItem.icon" :icon="menuItem.icon" /> {{menuItem.title}}
-            </a>
-  
-            <ul v-if="menuItem.children.length > 0" class="dropdown-menu">
-              <li v-for="childrenItem in menuItem.children">
-                <router-link class="dropdown-item" aria-current="page" :to="childrenItem.path_name">
-                  <font-awesome-icon v-if="childrenItem.icon" :icon="childrenItem.icon" /> {{childrenItem.title}}
-                </router-link>
-              </li>
-            </ul>
-  
-            <router-link v-else class="nav-link" aria-current="page" :to="menuItem.path_name"><font-awesome-icon v-if="menuItem.icon" :icon="menuItem.icon" /> {{menuItem.title}}</router-link>
-          
+<footer class=" fixed-bottom d-lg-none" :style="{ 'background-color' : bg_color }">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+
+    <div class="d-flex flex-row flex-nowrap  justify-content-around align-items-center text-center">
+
+
+      <div class="col" v-for="menuItem in menus" :class="{'dropup' : menuItem.children.length > 0}"
+        :key="menuItem.path_name">
+
+        <a v-if="menuItem.children.length > 0" class="nav-link dropdown-toggle" href="#" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <font-awesome-icon v-if="menuItem.icon" :icon="menuItem.icon" /> <br> {{menuItem.title}}
+        </a>
+
+        <ul v-if="menuItem.children.length > 0" class="dropdown-menu">
+          <li v-for="childrenItem in menuItem.children">
+            <router-link class="dropdown-item" aria-current="page" :to="childrenItem.path_name">
+              <font-awesome-icon v-if="childrenItem.icon" :icon="childrenItem.icon" /> {{childrenItem.title}}
+            </router-link>
           </li>
         </ul>
-        <!-- Left links -->
-  
-        <!-- Search form -->
-        <!-- Search form -->
-  
-      </div>
-      <!-- Collapsible wrapper -->
-  
-      
 
+        <router-link v-else class="nav-link" aria-current="page" :to="menuItem.path_name">
+          <font-awesome-icon v-if="menuItem.icon" :icon="menuItem.icon" /> <br> {{menuItem.title}}</router-link>
+
+      </div>
     </div>
-    <!-- Container wrapper -->
-  </header>
-  <!-- Navbar -->
-  
-  
+
+    
+
+  </div>
+  <!-- Container wrapper -->
+</footer>
+<!-- Navbar -->

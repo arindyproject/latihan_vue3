@@ -8,8 +8,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas)
 
-import bottomNavigationVue from "bottom-navigation-vue";
-import "bottom-navigation-vue/dist/style.css";
+
 
 
 //import {LoadingPlugin} from 'vue-loading-overlay';
