@@ -1,13 +1,23 @@
 <app-header :bg_color="app_base_data.main_theme_color" :menus="getMenus" />
 <app-bottom-nav  :bg_color="app_base_data.main_theme_color" :menus="getMenus" />
 
-<div class="container mt-5">
+<div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
 
 
-    <div class="content-wrapper">
+<app-sidebar />
+
+<main class="bd-main order-1">
+
+
+    <section class="content">
+        <div class="container-fluid">
         <router-view></router-view>
-    </div>
+        </div>
+    </section>
     
+    
+</main>
+
 </div>
 
 
