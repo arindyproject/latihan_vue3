@@ -43,56 +43,7 @@ export default class Main extends Vue {
     store = useStore();
     app_base_data = store.state.app_base_data;
 
-    collapsed = ref(false)
-    miniMenu = ref(false)
-
-    testMenu = [{
-            name: 'Getting Started',
-            icon: {
-                text: 'home',
-                class: 'material-icons-outlined'
-            },
-            children: [{
-                    name: 'level 1.1',
-                    href: '/a',
-                    icon: {
-                        text: 'home',
-                        class: 'material-icons-outlined'
-                    },
-                    children: [{
-                        href: '/b',
-                        name: 'level 1.1.1',
-                    }, ]
-                },
-                {
-                    name: 'level 1.2'
-                }
-            ],
-        },
-        {
-            header: 'Settings'
-        },
-        {
-            name: 'Dashboard',
-            icon: {
-                class: 'material-icons-outlined',
-                text: 'dashboard'
-            },
-            children: [{
-                href: '/c',
-                name: 'level 2.1',
-            }, ]
-        },
-        {
-            name: 'close menu',
-            icon: {
-                text: 'settings',
-                class: 'material-icons-outlined'
-            },
-        },
-    ]
-
-
+    isSidebarVisible = false;
 
 
     async mounted() {
