@@ -4,7 +4,11 @@ import {
 
 
 
-@Options()
+@Options({
+    props: {
+        isSidebarVisible: Boolean,
+      }
+})
 export default class appSideBar extends Vue {
     
 

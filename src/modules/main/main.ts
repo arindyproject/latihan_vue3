@@ -43,7 +43,7 @@ export default class Main extends Vue {
     store = useStore();
     app_base_data = store.state.app_base_data;
 
-    isSidebarVisible = false;
+    isSidebarVisible = true;
 
 
     async mounted() {

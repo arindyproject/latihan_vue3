@@ -1,0 +1,11 @@
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    transition: transform 0.3s; /* Efek animasi saat tampilan berubah */
+    transform: translateX(-250px); /* Sembunyikan sidebar secara default */
+  }
+
+  .show-sidebar {
+    transform: translateX(0); /* Tampilkan sidebar jika isSidebarVisible true */
+  }

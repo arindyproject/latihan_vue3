@@ -1,23 +1,13 @@
-<app-header :bg_color="app_base_data.main_theme_color" :menus="getMenus" />
-<app-bottom-nav  :bg_color="app_base_data.main_theme_color" :menus="getMenus" />
+<div class="wrapper">
 
-<div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
+    <app-header :bg_color="app_base_data.main_theme_color" :menus="getMenus" />
+    <app-bottom-nav :bg_color="app_base_data.main_theme_color" :menus="getMenus" />
+    <app-sidebar :isSidebarVisible="isSidebarVisible" />
 
-
-<app-sidebar :isSidebarVisible="isSidebarVisible" />
-
-<main class="bd-main order-1">
-
-
-    <section class="content">
-        <div class="container-fluid">
-        <router-view></router-view>
-        </div>
-    </section>
-    
-    
-</main>
+    <div class="content-wrapper">
+        <main class="bd-main order-1">
+            <router-view></router-view>
+        </main>
+    </div>
 
 </div>
-
-
