@@ -1,0 +1,31 @@
+{
+  "status" : true,
+    "code"   : 200,
+    "msg"    : "",
+    "data"   : {
+      "foto" : "https://instagram.fsoc9-1.fna.fbcdn.net/v/t51.2885-19/277439829_172114501816815_7261629511784878264_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fsoc9-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=SZmDGPGT2M4AX8YKn9X&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfDOaNhSRzv_epLEbHw4PZ0nvLKKo_8TGUDWGyimJ9UpWQ&oe=650F9C3E&_nc_sid=ee9879",
+      "name" : "Aji Ari Adam",
+      "company_name" : "ArindyProject",
+      "description" : "---",
+      "contacts" : [
+        {
+          "title" : "@arindyproject",
+          "icon"  : ["fab", "github"],
+          "url"   : "https://github.com/arindyproject",
+          "description" : ""
+        },
+        {
+          "title" : "@devarindy",
+          "icon"  : ["fab", "instagram"],
+          "url"   : "https://www.instagram.com/devarindy/",
+          "description" : ""
+        },
+        {
+          "title" : "arindyproject",
+          "icon"  : ["fab", "youtube"],
+          "url"   : "https://www.youtube.com/arindyproject",
+          "description" : ""
+        }
+      ]
+    }
+}
