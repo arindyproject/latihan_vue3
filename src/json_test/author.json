@@ -10,7 +10,7 @@
       "contacts" : [
         {
           "title" : "Saweria",
-          "icon"  : ["fab", "github"],
+          "icon"  : ["fas", "circle-dollar-to-slot"],
           "url"   : "https://saweria.co/arindyproject",
           "description" : "terimakasih atas donasinya!!"
         },
