@@ -9,6 +9,12 @@
       "description" : "---",
       "contacts" : [
         {
+          "title" : "Saweria",
+          "icon"  : ["fab", "github"],
+          "url"   : "https://saweria.co/arindyproject",
+          "description" : "terimakasih atas donasinya!!"
+        },
+        {
           "title" : "@arindyproject",
           "icon"  : ["fab", "github"],
           "url"   : "https://github.com/arindyproject",
