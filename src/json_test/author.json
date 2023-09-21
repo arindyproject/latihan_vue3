@@ -15,13 +15,13 @@
           "description" : "terimakasih atas donasinya!!"
         },
         {
-          "title" : "@arindyproject",
+          "title" : "arindyproject",
           "icon"  : ["fab", "github"],
           "url"   : "https://github.com/arindyproject",
           "description" : ""
         },
         {
-          "title" : "@devarindy",
+          "title" : "devarindy",
           "icon"  : ["fab", "instagram"],
           "url"   : "https://www.instagram.com/devarindy/",
           "description" : ""
