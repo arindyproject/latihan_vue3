@@ -23,7 +23,7 @@
         "version"           : "1.0.0 - beta",
         "ui"                : {
             "is_dark"        : false,
-            "navbar_skin"    : "navbar-dark",
+            "navbar_skin"    : "navbar-info navbar-light",
             "sidebar_skin"   : "sidebar-dark-primary",
             "menu_sidebar_collapsed" : false
         }
